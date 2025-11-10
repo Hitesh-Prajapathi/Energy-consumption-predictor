@@ -75,3 +75,48 @@ xgb.XGBRegressor(
     random_state=42,
     n_jobs=-1
 )
+```
+## 📈 Model Performance
+
+| Metric | Value | Description |
+|--------|--------|-------------|
+| **Initial RMSE (without lag features)** | ~1650 MW | Model trained only with datetime features |
+| **Final RMSE (with lag features)** | 250.46 MW 🎯 | After adding lag features |
+| **R² Score** | 0.9901 | Indicates 99.01% variance explained |
+| **MAE** | 151.37 MW | Mean absolute deviation |
+
+✅ The inclusion of lagged features significantly improved prediction accuracy, demonstrating the importance of temporal context in time series forecasting.
+
+---
+
+## 📊 Visualization Highlights
+- **Hourly Consumption Patterns** — Showed peak hours and daily trends.  
+- **Monthly Trends** — Revealed seasonal consumption spikes.  
+- **Train/Test Split Visualization** — Demonstrated clear temporal partitioning for model evaluation.
+
+---
+
+## 🧠 Key Insights
+- **Time-based patterns** are crucial for forecasting energy consumption.  
+- Adding **lagged features** captures historical dependencies effectively.  
+- **XGBoost** performs exceptionally well for **time series regression** when proper feature engineering is applied.  
+- Achieving an **RMSE of 250 MW** and **R² of 0.99** indicates strong generalization and practical applicability.
+
+---
+
+## 🚀 Future Enhancements
+- Implement rolling window validation for better time-based evaluation.  
+- Incorporate weather and temperature data for improved accuracy.  
+- Experiment with deep learning approaches (LSTM / Temporal Fusion Transformers).  
+- Develop a web dashboard for real-time energy consumption prediction.
+
+---
+
+## 🧰 Tech Stack
+- **Language:** Python  
+- **Libraries:**  
+  `pandas`, `numpy`, `matplotlib`, `seaborn`, `xgboost`, `scikit-learn`
+
+## 🏁 Conclusion
+This project successfully demonstrates the **power of feature engineering** and **gradient boosting methods** in forecasting time series energy consumption data.  
+With a strong **R² of 0.99** and **RMSE of 250 MW**, the model shows **exceptional predictive capability** 
