@@ -1,4 +1,4 @@
-# ⚡ Energy Consumption Analysis — Time Series Forecasting with XGBoost
+#  Energy Consumption Analysis — Time Series Forecasting with XGBoost
 
 ## 📘 Overview
 This project focuses on **predicting hourly energy consumption** using advanced time series modeling techniques.  
@@ -8,7 +8,7 @@ Through a step-by-step analysis and feature engineering approach, this project d
 
 ---
 
-## 🎯 Objective
+##  Objective
 The goal of this project is to:
 - Analyze patterns and seasonal trends in hourly energy consumption data.
 - Engineer time-based and lag-based features to capture temporal dependencies.
@@ -17,7 +17,7 @@ The goal of this project is to:
 
 ---
 
-## 🧩 Dataset
+##  Dataset
 **Dataset name:** `AEP_hourly.csv`  
 **Source:** [PJMW Hourly Energy Consumption Data (AEP)](https://archive.ics.uci.edu/ml/datasets/individual+household+electric+power+consumption) or Kaggle equivalent  
 
@@ -28,7 +28,7 @@ The goal of this project is to:
 
 ---
 
-## 🔍 Exploratory Data Analysis (EDA)
+##  Exploratory Data Analysis (EDA)
 - Visualized **overall hourly energy trends**.
 - Examined **daily**, **weekly**, and **monthly** consumption patterns.
 - Observed that:
@@ -37,9 +37,9 @@ The goal of this project is to:
 
 ---
 
-## ⚙️ Feature Engineering
+##  Feature Engineering
 
-### ✅ Temporal Features
+###  Temporal Features
 Extracted from the datetime index:
 - Hour of the day
 - Day of the week
@@ -49,7 +49,7 @@ Extracted from the datetime index:
 
 These features help the model learn **seasonality and time-based patterns**.
 
-### ✅ Lagged Features
+###  Lagged Features
 To incorporate temporal dependencies, lag features were created:
 - Previous 1, 2, and 3 hours (`lag_1`, `lag_2`, `lag_3`)
 - Same hour previous day (`lag_24`)
@@ -59,7 +59,7 @@ These help the model understand **short-term and long-term dependencies** in con
 
 ---
 
-## 🤖 Model — XGBoost Regressor
+##  Model — XGBoost Regressor
 The model used is **XGBoost**, a powerful gradient boosting algorithm known for handling structured/tabular data effectively.
 
 ### Model Parameters:
@@ -76,7 +76,7 @@ xgb.XGBRegressor(
     n_jobs=-1
 )
 ```
-## 📈 Model Performance
+##  Model Performance
 
 | Metric | Value | Description |
 |--------|--------|-------------|
@@ -85,18 +85,18 @@ xgb.XGBRegressor(
 | **R² Score** | 0.9901 | Indicates 99.01% variance explained |
 | **MAE** | 151.37 MW | Mean absolute deviation |
 
-✅ The inclusion of lagged features significantly improved prediction accuracy, demonstrating the importance of temporal context in time series forecasting.
+ The inclusion of lagged features significantly improved prediction accuracy, demonstrating the importance of temporal context in time series forecasting.
 
 ---
 
-## 📊 Visualization Highlights
+##  Visualization Highlights
 - **Hourly Consumption Patterns** — Showed peak hours and daily trends.  
 - **Monthly Trends** — Revealed seasonal consumption spikes.  
 - **Train/Test Split Visualization** — Demonstrated clear temporal partitioning for model evaluation.
 
 ---
 
-## 🧠 Key Insights
+##  Key Insights
 - **Time-based patterns** are crucial for forecasting energy consumption.  
 - Adding **lagged features** captures historical dependencies effectively.  
 - **XGBoost** performs exceptionally well for **time series regression** when proper feature engineering is applied.  
@@ -104,7 +104,7 @@ xgb.XGBRegressor(
 
 ---
 
-## 🚀 Future Enhancements
+##  Future Enhancements
 - Implement rolling window validation for better time-based evaluation.  
 - Incorporate weather and temperature data for improved accuracy.  
 - Experiment with deep learning approaches (LSTM / Temporal Fusion Transformers).  
@@ -112,11 +112,11 @@ xgb.XGBRegressor(
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 - **Language:** Python  
 - **Libraries:**  
   `pandas`, `numpy`, `matplotlib`, `seaborn`, `xgboost`, `scikit-learn`
 
-## 🏁 Conclusion
+##  Conclusion
 This project successfully demonstrates the **power of feature engineering** and **gradient boosting methods** in forecasting time series energy consumption data.  
 With a strong **R² of 0.99** and **RMSE of 250 MW**, the model shows **exceptional predictive capability** 
